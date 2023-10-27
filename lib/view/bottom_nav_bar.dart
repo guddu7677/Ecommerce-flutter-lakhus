@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screens/add_cart.dart';
 import 'package:ecommerce_app/screens/cart_screen.dart';
 import 'package:ecommerce_app/screens/category_page.dart';
 import 'package:ecommerce_app/screens/home_page.dart';
@@ -36,8 +37,9 @@ class _BottomNavBarViewState extends State<BottomNavBarViews> {
       screens: const [
         HomePage(),
         CategoryPage(),
-       OrderHistoryScreen(),
-        ProfileScreen()
+        OrderHistoryScreen(),
+        AddtoCart(),
+        ProfileScreen(),
       ],
       controller: controller,
       hideNavigationBarWhenKeyboardShows: true,
@@ -45,28 +47,39 @@ class _BottomNavBarViewState extends State<BottomNavBarViews> {
       items: [
         PersistentBottomNavBarItem(
             title: "Home",
-            icon: const Icon(Icons.home_outlined),
+            textStyle: TextStyle(fontSize: 10),
+            icon: Icon(Icons.home_outlined),
             activeColorPrimary: orangeColor,
             inactiveColorPrimary: Colors.grey,
-            iconSize: 30.0),
+            iconSize: 25.0),
         PersistentBottomNavBarItem(
             title: "Category",
-            icon: const Icon(Icons.category_outlined),
+            textStyle: TextStyle(fontSize: 10),
+            icon: Icon(Icons.category_outlined),
             activeColorPrimary: orangeColor,
             inactiveColorPrimary: Colors.grey,
-            iconSize: 30.0),
+            iconSize: 25.0),
         PersistentBottomNavBarItem(
             title: "Order History",
-            icon: const Icon(Icons.storefront_sharp),
+            textStyle: TextStyle(fontSize: 10),
+            icon: Icon(Icons.storefront_sharp),
             activeColorPrimary: orangeColor,
             inactiveColorPrimary: Colors.grey,
-            iconSize: 30.0),
+            iconSize: 25.0),
+        PersistentBottomNavBarItem(
+            title: "Add to cart",
+            textStyle: TextStyle(fontSize: 10),
+            icon: Icon(CupertinoIcons.cart),
+            activeColorPrimary: orangeColor,
+            inactiveColorPrimary: Colors.grey,
+            iconSize: 25.0),
         PersistentBottomNavBarItem(
             title: "Profile",
-            icon: const Icon(CupertinoIcons.person),
+            textStyle: TextStyle(fontSize: 10),
+            icon: Icon(CupertinoIcons.person),
             activeColorPrimary: orangeColor,
             inactiveColorPrimary: Colors.grey,
-            iconSize: 30.0),
+            iconSize: 25.0),
       ],
     ));
   }
